@@ -1,4 +1,9 @@
-﻿cd .\Desktop
+
+## --------------------------------------------------------------------------##
+
+## FUNCION DESENCRIPTACION DENTRO DE CAJ DONDE SE INTRODUCE LA CLAVE
+
+## --------------------------------------------------------------------------##
 
 Function Decrypt-File
 {
